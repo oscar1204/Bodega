@@ -4,5 +4,11 @@ import { Component } from '@angular/core';
   templateUrl: ""
 })
 export class Productocomponent {
+<<<<<<< HEAD
+=======
+  public Id = '';
+  public nombre = "";
+  public cantidad=''
+>>>>>>> Actualizacion 1
 
 }

@@ -4,5 +4,11 @@ import { Component } from '@angular/core';
   templateUrl: ""
 })
 export class Stockcomponent {
+<<<<<<< HEAD
+=======
+  public Id = '';
+  public Nombre = "";
+  public Cantidad = "";
+>>>>>>> Actualizacion 1
 
 }
