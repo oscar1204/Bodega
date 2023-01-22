@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-Salida',
-  templateUrl:"./Estado/Estado.component.html"
+  templateUrl:"./Salida/Salida.component.html"
   
 })
 export class SalidaComponent {
