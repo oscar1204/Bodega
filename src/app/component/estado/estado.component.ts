@@ -9,7 +9,7 @@ import {EstadoService} from '../../Servicios/Estado/Estados.service';
 export class EstadoComponent {
  estado1= 'optimo'
  estado2= 'Defectoso'
- constructor(){
+ constructor(private _estadoService:EstadoService){
 
 
 
