@@ -13,6 +13,8 @@ import { APP_ROUTING } from './app.routes';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,9 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
