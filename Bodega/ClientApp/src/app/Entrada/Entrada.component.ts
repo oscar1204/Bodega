@@ -3,11 +3,4 @@ import { Component } from '@angular/core';
   selector: 'app-Entrada',
   templateUrl: "./Entrada/Entrda.component.html"
 })
-export class Entradacomponent {
-<<<<<<< HEAD
-
-=======
-  public Entrada = '';
-  public HoraEntrada = "";
->>>>>>> Actualizacion 1
-}
+export class Entradacomponent { }

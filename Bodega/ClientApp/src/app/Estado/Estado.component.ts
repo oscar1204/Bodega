@@ -4,10 +4,8 @@ import { Component } from '@angular/core'
   templateUrl: ""
 })
 export class Estadocomponent {
-<<<<<<< HEAD
 
-=======
   public estado1 = "Optimo";
   public estado2="defectouso"
->>>>>>> Actualizacion 1
+
 }

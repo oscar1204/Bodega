@@ -4,11 +4,10 @@ import { Component } from '@angular/core';
   templateUrl: "./Producto/Producto.component.html"
 })
 export class Productocomponent {
-<<<<<<< HEAD
-=======
+
   public Id = '';
   public nombre = "";
   public cantidad=''
->>>>>>> Actualizacion 1
+
 
 }

@@ -5,10 +5,9 @@ import { Component } from '@angular/core';
   
 })
 export class SalidaComponent {
-<<<<<<< HEAD
 
-=======
+
   public Salida = '';
   public HoraSalida = '';
->>>>>>> Actualizacion 1
+
 }

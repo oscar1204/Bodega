@@ -1,47 +1,25 @@
-
-using Microsoft.Data.SqlClient;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddConnections();
-SqlConnectionStringBuilder connectionStringBuilder = new();
-connectionStringBuilder.DataSource = "";
-connectionStringBuilder.InitialCatalog = "";
-var connec = connectionStringBuilder.ConnectionString;
-
-using (SqlConnection connection = new SqlConnection(connec))
-{
-    connection.Open();
-    SqlCommand command = connection.CreateCommand();
-    var reader = command.ExecuteReader();
-    while (reader.Read())
-    {
-        Console.WriteLine(reader.GetString(1));
-    }
-    reader.Close();
-}
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
 
+app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
-
-app.MapFallbackToFile("index.html");
+app.MapControllers();
 
 app.Run();
