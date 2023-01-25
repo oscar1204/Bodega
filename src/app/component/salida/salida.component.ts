@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SalidaService } from 'src/app/Servicios/Salida/Salida.Service';
 
 @Component({
   selector: 'app-salida',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   ]
 })
 export class SalidaComponent {
+ constructor(private _salidaservice:SalidaService){
 
+
+ }
+ getsalida(){
+
+  this._salidaservice.getsalida()
+  .subscribe(salida=>{
+    console.log(salida)
+  })
+ }
 }

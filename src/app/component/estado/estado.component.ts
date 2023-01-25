@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import {EstadoService} from '../../Servicios/Estado/Estados.service';
 @Component({
@@ -12,6 +13,14 @@ export class EstadoComponent {
  constructor(private _estadoService:EstadoService){
 
 
+
+ }
+ getestado(){
+  this._estadoService.getestado()
+  .subscribe(estado=>{
+    console.log(estado);
+
+  });
 
  }
 }
